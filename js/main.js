@@ -104,7 +104,7 @@ $(document).ready(function () {
 
     function createDivs(pattern, fnDivCreation) {
         var $body = $('.main');
-        // $body.empty();
+        $body.empty();
 
         var timer = new TimeLogger();
         timer.start();
@@ -134,8 +134,7 @@ $(document).ready(function () {
     }
 
     function staticDivCreation($parent) {
-        var widthVal = Math.random();
-        widthVal = Math.random() > 0.5 ? '80%' : ($parent.width() * 0.8 + 'px');
+        var widthVal = Math.random() > 0.5 ? '80%' : ($parent.width() * 0.8 + 'px');
         return $('<div style="width: ' + widthVal + ';">' + lorem.generate() + '</div>');
     }
 
